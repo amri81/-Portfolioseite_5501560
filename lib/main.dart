@@ -200,13 +200,20 @@ class Lebenslauf extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: () {
-          launch(
-              'projektname/Lebenslauf-jdid.pdf'); // Hier den Pfad zur PDF-Datei anpassen
-        },
-        child: Text('Lebenslauf anzeigen'),
+        onPressed: _showLebenslauf,
+        child: Text('Hier finden Sie meinen Lebenslauf'),
       ),
     );
+  }
+
+  void _showLebenslauf() {
+    const url =
+        'projektname/Lebenslauf-jdid.pdf'; // Pfad zur PDF-Datei anpassen
+    if (canLaunch(url) != null) {
+      launch(url);
+    } else {
+      print('Could not launch $url');
+    }
   }
 }
 
@@ -216,21 +223,28 @@ class Faehigkeiten extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
+        crossAxisAlignment:
+            CrossAxisAlignment.start, // Align text to the start (optional)
         children: [
           Text(
             'Hier sind einige meiner Fähigkeiten, die ich im Laufe der Zeit entwickelt habe.',
             style: TextStyle(fontSize: 18),
           ),
-          SizedBox(height: 90), // Add some spacing between text and image
+          SizedBox(height: 20), // Add some spacing between text and image
           Image.asset(
             "lib/images/java.png",
             height: 90,
           ),
-          SizedBox(height: 90), // Add some spacing between the images
+          SizedBox(height: 20), // Add some spacing between the images
           Image.asset(
             "lib/images/saage.jpeg",
             height: 90,
           ),
+          SizedBox(height: 20), // Add some spacing between the images
+          Image.asset(
+            "lib/images/Flutter.png",
+            height: 90,
+          )
         ],
       ),
     );
