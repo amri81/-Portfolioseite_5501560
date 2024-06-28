@@ -44,8 +44,8 @@ class _MyAppState extends State<MyApp> {
           foregroundColor: Colors.black,
         ),
         textTheme: TextTheme(
-          bodyText1: TextStyle(color: Colors.black),
-          bodyText2: TextStyle(color: Colors.black),
+          bodyLarge: TextStyle(color: Colors.black),
+          bodyMedium: TextStyle(color: Colors.black),
         ),
       ),
       darkTheme: ThemeData(
@@ -57,8 +57,8 @@ class _MyAppState extends State<MyApp> {
           foregroundColor: Colors.white,
         ),
         textTheme: TextTheme(
-          bodyText1: TextStyle(color: Colors.white),
-          bodyText2: TextStyle(color: Colors.white),
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white),
         ),
       ),
       themeMode: _themeMode,
@@ -207,8 +207,7 @@ class Lebenslauf extends StatelessWidget {
   }
 
   void _showLebenslauf() {
-    const url =
-        'projektname/Lebenslauf-jdid.pdf'; // Pfad zur PDF-Datei anpassen
+    const url = 'projektname/Lebenslauf-jdid.pdf';
     if (canLaunch(url) != null) {
       launch(url);
     } else {
@@ -223,24 +222,23 @@ class Faehigkeiten extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
-        crossAxisAlignment:
-            CrossAxisAlignment.start, // Align text to the start (optional)
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Hier sind einige meiner Fähigkeiten, die ich im Laufe der Zeit entwickelt habe.',
             style: TextStyle(fontSize: 18),
           ),
-          SizedBox(height: 20), // Add some spacing between text and image
+          SizedBox(height: 20),
           Image.asset(
             "lib/images/java.png",
             height: 90,
           ),
-          SizedBox(height: 20), // Add some spacing between the images
+          SizedBox(height: 20),
           Image.asset(
             "lib/images/saage.jpeg",
             height: 90,
           ),
-          SizedBox(height: 20), // Add some spacing between the images
+          SizedBox(height: 20),
           Image.asset(
             "lib/images/Flutter.png",
             height: 90,
@@ -318,7 +316,7 @@ class Kontakt extends StatelessWidget {
                 if (_formKey.currentState!.validate()) {
                   final Uri emailLaunchUri = Uri(
                     scheme: 'mailto',
-                    path: 'amrinouaman@gmail.com',
+                    path: 'amrinouaman@gmail',
                     query:
                         'subject=${Uri.encodeComponent(_subjectController.text)}'
                         '&body=${Uri.encodeComponent('Name: ${_nameController.text}\n\n${_messageController.text}')}\n\n'
