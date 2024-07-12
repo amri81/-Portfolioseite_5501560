@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:firebase_core/firebase_core.dart'; // Firebase Import
+import 'package:portfolio_5501560/firebase_options.dart'; // Deine Firebase-Konfiguration
 
 void main() {
   runApp(AppRoot());

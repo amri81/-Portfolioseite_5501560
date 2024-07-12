@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "296918959047",
+    "project_id": "portfolioseite-183b8",
+    "storage_bucket": "portfolioseite-183b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296918959047:android:70d16bf0468689f797cfe2",
+        "android_client_info": {
+          "package_name": "com.nouamanamri.portfolioseite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXWNQ3HBn7fMVUhhAojfW1Rrtws1bcyGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
