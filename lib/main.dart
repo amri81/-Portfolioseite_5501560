@@ -201,9 +201,71 @@ class Lebenslauf extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ElevatedButton(
-        onPressed: _showLebenslauf,
-        child: Text('Hier finden Sie meinen Lebenslauf'),
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'L e b e n s l a u f',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  Image.asset(
+                    "lib/images/FOTO-CV.jpg",
+                    height: 150, // Adjust height as needed
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Text('Name: Nouaman Amri'),
+              Text('Adresse: Steinkaute 04, 61169 Friedberg (Hessen)'),
+              Text('Telefon: 01575 8216792'),
+              Text('E-Mail: amrinouaman@gmail.com'),
+              Text('Geburtsdatum: 13.10.2000, Nador, Marokko'),
+              SizedBox(height: 20),
+              Text('Bildung:', style: TextStyle(fontWeight: FontWeight.bold)),
+              Text('Sept. 2023 - laufend: Technische Hochschule Mittelhessen, '
+                  'Fachbereich Wirtschaftsinformatik'),
+              Text('Apr. 2022 - Dez. 2022: Studienkolleg Halle-Merseburg, '
+                  'Abschluss: Feststellungsprüfung Schwerpunkt Wirtschaft-Kurs, Note: 2,4'),
+              Text(
+                  'Okt. 2020 - Sept. 2021: Deutschkurs Niveau B1 bei „IMAI“, Nador, Marokko'),
+              Text(
+                  'Sept. 2016 - Juni 2019: Al Matar Technisch, Gymnasium in Nador, Marokko, '
+                  'Abschluss: Abitur, Note: 2,7'),
+              SizedBox(height: 20),
+              Text('Berufserfahrung:',
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              Text('Nov. 2019 - Feb. 2020: Marchica Conseil in Nador, Marokko, '
+                  'Buchhaltungs- und Steuerbüro Assistent (Praktikum)'),
+              Text(
+                  'Nov. 2020 - Juli 2021: Programmierkurs mit Zertifikat bei „PIGIER“ in Zaio, Marokko'),
+              SizedBox(height: 20),
+              Text('Software-Kenntnisse:',
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              Text('. MS Office (PowerPoint, Word, Excel)'),
+              Text(
+                  '. Programmiersprachen und Frameworks: Java, Dart und Flutter'),
+              Text('. Datenbanken und Backend: Firebase'),
+              Text(
+                  '. Saage-Buchhaltungssoftware: Kenntnisse aus Schule und Praktikum'),
+              SizedBox(height: 20),
+              Text('Sprachkenntnisse:',
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(
+                  'Amazigh (Muttersprache), Arabisch (sehr gut), Deutsch (C1), '
+                  'Englisch (gut), Französisch (Grundkenntnisse)'),
+              SizedBox(height: 20),
+              Text('Frankfurt, den 06.07.2024', textAlign: TextAlign.right),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
       ),
     );
   }
